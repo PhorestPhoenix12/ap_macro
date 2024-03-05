@@ -12,8 +12,18 @@
     format("opentype");
 }
 /* default to border-box */
-@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+:root {
+  --color-bg: #69f7be;
+  --color-text-main: #000000;
+  --color-primary: #ffff00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -40,7 +50,7 @@ img{
 /* Your custom styles */
 
 body {
-  font-family: 'Sniglet', sans-serif;
+  font-family: HK Grotesk;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -50,7 +60,7 @@ body {
 }
 
 header {
-  font-family: 'Sniglet', cursive;
+  font-family: HK Grotesk;
   background-color: #399E8D;
   padding: 20px;
 }
