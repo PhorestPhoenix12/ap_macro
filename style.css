@@ -13,7 +13,7 @@
 }
 /* default to border-box */
 :root {
-  --color-bg: #69f7be;
+  --color-bg: #d5e8e1;
   --color-text-main: #000000;
   --color-primary: #ffff00;
   --wrapper-height: 87vh;
@@ -177,7 +177,7 @@ footer {
 
 #timer-bar {
   height: 100%;
-  background-color: #00C853;
+  background-color: #b9ebd8;
 }
 
 #score-display {
