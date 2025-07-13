@@ -47,15 +47,12 @@ body {
 }
 
 /* ----------  TYPOGRAPHY  ---------- */
-h1, h3 {
+h1, h2, h3 {
   font-family: var(--font-header);
   color: var(--color-primary);
   margin-top: 0;
 }
 h2 {
-  margin-top: 0;
-  font-family: var(--font-header);
-  color: var(--color-deep);
   text-align: center;
   border: 2px solid var(--color-accent);
   border-radius: 25px;
