@@ -46,12 +46,12 @@ body {
 }
 
 /* ----------  TYPOGRAPHY  ---------- */
-h1, h3 {
+h1, h2 {
   font-family: var(--font-header);
   color: var(--color-primary);
   margin-top: 0;
 }
-h2 {
+h3 {
   margin-top: 0;
   font-family: var(--font-header);
   color: #3D9C7F;
