@@ -8,6 +8,7 @@
   --color-primary:   #FFD54F;  /* sunny gold */
   --color-accent:    #F4E2D8;  /* soft rose-beige */
   --color-highlight: #F9A825;  /* golden accent */
+  --color-green:     #81C784;  /* leafy green accent */
 
   --wrapper-height: 87vh;
   --image-max-width: 300px;
@@ -65,15 +66,26 @@ h3 {
 /* ----------  HEADER & NAVIGATION  ---------- */
 header {
   background: var(--color-primary);
-  padding: 20px;
-  text-align: center;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header h1 {
   font-family: var(--font-header);
+  font-size: 1.75rem;
+  margin: 0;
+  color: var(--color-text-main);
 }
 
 nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 nav li {
   display: inline-block;
@@ -82,11 +94,14 @@ nav a {
   font-family: var(--font-body);
   color: var(--color-text-main);
   text-decoration: none;
-  margin-right: 15px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
 }
 nav a:hover,
 nav a.active {
-  color: var(--color-highlight);
+  background-color: var(--color-green);
+  color: white;
 }
 
 /* ----------  SECTION STYLING  ---------- */
@@ -100,6 +115,15 @@ section p {
 section h3 {
   font-family: var(--font-header);
   color: var(--color-primary);
+}
+
+/* Optional light green highlight section */
+.green-section {
+  background-color: #F0F9F3;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 900px;
 }
 
 /* ----------  RESOURCE + LINK SECTIONS  ---------- */
@@ -125,12 +149,28 @@ section h3 {
 h4 a:link,
 h4 a:visited,
 h3 a:link {
-  color: var(--color-highlight);
+  color: var(--color-green);
   font-family: var(--font-body);
 }
 
 h3 a:visited {
   color: var(--color-accent);
+}
+
+/* ----------  BUTTONS  ---------- */
+.button {
+  background-color: var(--color-green);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #66BB6A;
 }
 
 /* ----------  FOOTER  ---------- */
@@ -201,8 +241,4 @@ footer {
 
 #game-over-screen h3 {
   font-size: 40px;
-}
-
-#game-over-screen p {
-  font-size: 24px;
 }
