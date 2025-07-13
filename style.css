@@ -52,6 +52,9 @@ h1, h2, h3 {
   margin-top: 0;
 }
 h2 {
+  margin-top: 0;
+  font-family: var(--font-header);
+  color: #3D9C7F;
   text-align: center;
   border: 2px solid var(--color-accent);
   border-radius: 25px;
