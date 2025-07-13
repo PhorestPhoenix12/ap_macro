@@ -1,17 +1,18 @@
-/* a minimalist set of CSS resets */
 /* Import fonts */
 @font-face {
-  font-family: HK Grotesk;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
-    format("opentype");
+  font-family: 'HK Grotesk';
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027") format("opentype");
 }
 @font-face {
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-weight: bold;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
-    format("opentype");
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437") format("opentype");
 }
-/* default to border-box */
+
+/* Google Font Import for Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Color & Font Theme Variables */
 :root {
   --color-bg: #F2FFF8;
   --color-text-main: #052E27;
@@ -25,11 +26,11 @@
   --font-family-header: 'HK Grotesk', sans-serif;
 }
 
+/* Resets */
 html {
   box-sizing: border-box;
   font-size: 16px;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -39,13 +40,13 @@ video {
   height: auto;
   max-width: 100%;
 }
-
 img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Body and layout */
 body {
   font-family: var(--font-family);
   margin: 0;
@@ -66,10 +67,10 @@ header {
 h2 {
   color: #146356;
   text-align: center;
-  border-style: solid;
-  border-color: var(--color-accent);
+  border: 2px solid var(--color-accent);
   border-radius: 25px;
-  background-color: #fff;
+  background-color: #ffffff;
+  font-family: var(--font-family-header);
 }
 
 nav ul {
@@ -88,7 +89,6 @@ nav ul li a {
   text-decoration: none;
   margin-right: 15px;
 }
-
 nav ul li a:hover,
 nav ul li a.active {
   color: #dddddd;
@@ -128,12 +128,13 @@ section p {
   width: 600px;
 }
 
+/* Anchor links */
 .anchor-links {
   width: 500px;
   float: left;
   margin: 3rem;
   padding: 1rem;
-  border: 2px solid #90ee90;
+  border: 2px solid var(--color-accent);
   border-radius: 15px;
   background-color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -144,7 +145,6 @@ h4 a:visited,
 h3 a:link {
   color: #61944D;
 }
-
 h3 a:visited {
   color: var(--color-accent);
 }
@@ -156,6 +156,7 @@ footer {
   text-align: center;
 }
 
+/* Game styles */
 #game-container {
   position: relative;
   display: flex;
