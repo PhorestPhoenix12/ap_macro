@@ -1,36 +1,39 @@
+/* a minimalist set of CSS resets */
 /* Import fonts */
 @font-face {
-  font-family: 'HK Grotesk';
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027") format("opentype");
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
 }
 @font-face {
-  font-family: 'HK Grotesk';
+  font-family: HK Grotesk;
   font-weight: bold;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437") format("opentype");
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
 }
 
-/* Google Font Import for Open Sans */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* Import Playfair Display and Rubik */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Rubik&display=swap');
 
-/* Color & Font Theme Variables */
 :root {
-  --color-bg: #F2FFF8;
-  --color-text-main: #052E27;
-  --color-primary: #5EB78F;
-  --color-accent: #A3DA8D;
-  --color-highlight: #FDF6EC;
+  --color-bg: #FFFDF6;
+  --color-text-main: #2D2D2D;
+  --color-primary: #FFD54F;
+  --color-accent: #F4E2D8;
+  --color-highlight: #F9A825;
   --wrapper-height: 87vh;
   --image-max-width: 300px;
   --image-margin: 3rem;
-  --font-family: 'Open Sans', sans-serif;
-  --font-family-header: 'HK Grotesk', sans-serif;
+  --font-family: 'Rubik', sans-serif;
+  --font-family-header: 'Playfair Display', serif;
 }
 
-/* Resets */
 html {
   box-sizing: border-box;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -40,13 +43,13 @@ video {
   height: auto;
   max-width: 100%;
 }
+
 img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Body and layout */
 body {
   font-family: var(--font-family);
   margin: 0;
@@ -65,9 +68,10 @@ header {
 }
 
 h2 {
-  color: #146356;
+  color: var(--color-highlight);
   text-align: center;
-  border: 2px solid var(--color-accent);
+  border-style: solid;
+  border-color: var(--color-accent);
   border-radius: 25px;
   background-color: #ffffff;
   font-family: var(--font-family-header);
@@ -85,13 +89,14 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #ffffff;
+  color: #2D2D2D;
   text-decoration: none;
   margin-right: 15px;
 }
+
 nav ul li a:hover,
 nav ul li a.active {
-  color: #dddddd;
+  color: var(--color-highlight);
 }
 
 section {
@@ -102,12 +107,14 @@ section {
 }
 
 section h2 {
-  color: #146356;
+  color: var(--color-highlight);
   margin-bottom: 20px;
+  font-family: var(--font-family-header);
 }
 
 section h3 {
-  color: #61944D;
+  color: var(--color-primary);
+  font-family: var(--font-family-header);
 }
 
 section p {
@@ -117,7 +124,7 @@ section p {
 
 .resources {
   padding: 5px;
-  background-color: #F2FFED;
+  background-color: var(--color-accent);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -128,13 +135,12 @@ section p {
   width: 600px;
 }
 
-/* Anchor links */
 .anchor-links {
   width: 500px;
   float: left;
   margin: 3rem;
   padding: 1rem;
-  border: 2px solid var(--color-accent);
+  border: 2px solid var(--color-primary);
   border-radius: 15px;
   background-color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -143,20 +149,20 @@ section p {
 h4 a:link,
 h4 a:visited,
 h3 a:link {
-  color: #61944D;
+  color: var(--color-highlight);
 }
+
 h3 a:visited {
   color: var(--color-accent);
 }
 
 footer {
   background-color: var(--color-primary);
-  color: #ffffff;
+  color: #2D2D2D;
   padding: 20px;
   text-align: center;
 }
 
-/* Game styles */
 #game-container {
   position: relative;
   display: flex;
@@ -166,7 +172,7 @@ footer {
 }
 
 #game-canvas {
-  border: 2px solid #1976D2;
+  border: 2px solid var(--color-highlight);
   border-radius: 10px;
   background-color: #FFF9E2;
 }
@@ -185,7 +191,7 @@ footer {
 
 #timer-bar {
   height: 100%;
-  background-color: #b9ebd8;
+  background-color: var(--color-accent);
 }
 
 #score-display {
@@ -219,3 +225,4 @@ footer {
 #game-over-screen p {
   font-size: 24px;
 }
+
