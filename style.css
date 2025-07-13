@@ -13,16 +13,17 @@
 }
 /* default to border-box */
 :root {
-  --color-bg: #d5e8e1;
-  --color-text-main: #000000;
-  --color-primary: #ffff00;
+  --color-bg: #F2FFF8;
+  --color-text-main: #052E27;
+  --color-primary: #5EB78F;
+  --color-accent: #A3DA8D;
+  --color-highlight: #FDF6EC;
   --wrapper-height: 87vh;
   --image-max-width: 300px;
   --image-margin: 3rem;
-  --font-family: "HK Grotesk";
-  --font-family-header: "HK Grotesk";
+  --font-family: 'Open Sans', sans-serif;
+  --font-family-header: 'HK Grotesk', sans-serif;
 }
-
 
 html {
   box-sizing: border-box;
@@ -32,36 +33,33 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-/* adjust typography defaults */
 
-
-/* images and videos max out at full width */
 img,
 video {
   height: auto;
   max-width: 100%;
 }
 
-img{
+img {
   display: block;
   margin-left: auto;
   margin-right: auto;
- }
-/* Your custom styles */
+}
 
 body {
-  font-family: HK Grotesk;
+  font-family: var(--font-family);
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #EAFFE2;
-  display:flex; 
-  flex-direction:column;
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-  font-family: HK Grotesk;
-  background-color: #399E8D;
+  font-family: var(--font-family-header);
+  background-color: var(--color-primary);
   padding: 20px;
 }
 
@@ -69,7 +67,7 @@ h2 {
   color: #146356;
   text-align: center;
   border-style: solid;
-  border-color: #A3DA8D;
+  border-color: var(--color-accent);
   border-radius: 25px;
   background-color: #fff;
 }
@@ -81,7 +79,7 @@ nav ul {
 }
 
 nav ul li {
-  font-family: 'Sniglet', sans-serif;
+  font-family: var(--font-family);
   display: inline;
 }
 
@@ -91,32 +89,30 @@ nav ul li a {
   margin-right: 15px;
 }
 
-nav ul li a:hover {
-  color: #dddddd;
-}
-
+nav ul li a:hover,
 nav ul li a.active {
   color: #dddddd;
 }
 
 section {
   padding: 50px;
-  background-color: #EAFFE2;
+  background-color: var(--color-bg);
   margin-bottom: 30px;
-  color: #052E27;
+  color: var(--color-text-main);
 }
 
 section h2 {
   color: #146356;
   margin-bottom: 20px;
 }
+
 section h3 {
-  color: #61944D
+  color: #61944D;
 }
 
 section p {
-  font-family: 'sniglet', sans-serif;
-  color: #052E27;
+  font-family: var(--font-family);
+  color: var(--color-text-main);
 }
 
 .resources {
@@ -128,29 +124,40 @@ section p {
 .map-container {
   padding: 0px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  height:450px;
-  width:600px;
+  height: 450px;
+  width: 600px;
 }
 
+.anchor-links {
+  width: 500px;
+  float: left;
+  margin: 3rem;
+  padding: 1rem;
+  border: 2px solid #90ee90;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h4 a:link,
+h4 a:visited,
 h3 a:link {
   color: #61944D;
 }
 
 h3 a:visited {
-  color: #A3DA8D;
+  color: var(--color-accent);
 }
 
 footer {
-  background-color: #399E8D;
+  background-color: var(--color-primary);
   color: #ffffff;
   padding: 20px;
   text-align: center;
 }
 
-/* Game styles */
-
 #game-container {
-  position: relative; /* Adds position relative to set position for timer bar */
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,7 +171,7 @@ footer {
 }
 
 #timer-bar-container {
-  position: absolute; /* Positions the timer bar at the bottom of the game container */
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -181,29 +188,33 @@ footer {
 }
 
 #score-display {
-  margin-top: 10px; /* Addd some spacing below the canvas for the score display */
+  margin-top: 10px;
   font-size: 24px;
   font-weight: bold;
 }
+
 #game-over-screen {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#game-over-screen h3 {
+#game-over-screen h3,
+#game-over-screen p {
   color: #ffffff;
+}
+
+#game-over-screen h3 {
   font-size: 40px;
 }
 
 #game-over-screen p {
-  color: #ffffff;
   font-size: 24px;
 }
