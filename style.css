@@ -3,12 +3,11 @@
 
 /* ----------  DESIGN TOKENS  ---------- */
 :root {
-  --color-bg:        #FFFDF6;  /* warm parchment */
-  --color-text-main: #2D2D2D;  /* charcoal */
-  --color-primary:   #FFD54F;  /* sunny gold */
-  --color-accent:    #F4E2D8;  /* soft rose-beige */
-  --color-highlight: #F9A825;  /* golden accent */
-  --color-green:     #81C784;  /* leafy green accent */
+  --color-bg:        #F2FFF8;  /* mint cream */
+  --color-primary:   #5EB78F;  /* fresh jade green */
+  --color-accent:    #A3DA8D;  /* pale lime green */
+  --color-text-main: #052E27;  /* deep green */
+  --color-highlight: #FDF6EC;  /* soft warm white */
 
   --wrapper-height: 87vh;
   --image-max-width: 300px;
@@ -49,18 +48,18 @@ body {
 /* ----------  TYPOGRAPHY  ---------- */
 h1, h2, h3 {
   font-family: var(--font-header);
-  color: var(--color-highlight);
+  color: var(--color-primary);
   margin-top: 0;
 }
 h2 {
   text-align: center;
   border: 2px solid var(--color-accent);
   border-radius: 25px;
-  background: var(--color-bg);
+  background: var(--color-highlight);
   padding: 0.6rem 1rem;
 }
 h3 {
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 /* ----------  HEADER & NAVIGATION  ---------- */
@@ -76,7 +75,7 @@ header h1 {
   font-family: var(--font-header);
   font-size: 1.75rem;
   margin: 0;
-  color: var(--color-text-main);
+  color: var(--color-highlight);
 }
 
 nav ul {
@@ -92,7 +91,7 @@ nav li {
 }
 nav a {
   font-family: var(--font-body);
-  color: var(--color-text-main);
+  color: var(--color-highlight);
   text-decoration: none;
   padding: 0.5rem 0.75rem;
   border-radius: 6px;
@@ -100,8 +99,8 @@ nav a {
 }
 nav a:hover,
 nav a.active {
-  background-color: var(--color-green);
-  color: white;
+  background-color: var(--color-accent);
+  color: var(--color-text-main);
 }
 
 /* ----------  SECTION STYLING  ---------- */
@@ -117,9 +116,9 @@ section h3 {
   color: var(--color-primary);
 }
 
-/* Optional light green highlight section */
+/* Optional lightly shaded green section */
 .green-section {
-  background-color: #F0F9F3;
+  background-color: #E6FAED;
   padding: 3rem 2rem;
   border-radius: 12px;
   margin: 2rem auto;
@@ -130,7 +129,7 @@ section h3 {
 .resources {
   background: var(--color-accent);
   padding: 0.8rem 1rem;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
   font-family: var(--font-body);
 }
 
@@ -141,15 +140,15 @@ section h3 {
   padding: 1rem;
   border: 2px solid var(--color-primary);
   border-radius: 15px;
-  background: var(--color-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: var(--color-highlight);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   font-family: var(--font-body);
 }
 
 h4 a:link,
 h4 a:visited,
 h3 a:link {
-  color: var(--color-green);
+  color: var(--color-primary);
   font-family: var(--font-body);
 }
 
@@ -159,8 +158,8 @@ h3 a:visited {
 
 /* ----------  BUTTONS  ---------- */
 .button {
-  background-color: var(--color-green);
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-highlight);
   padding: 0.6rem 1.2rem;
   border: none;
   border-radius: 8px;
@@ -170,13 +169,14 @@ h3 a:visited {
   transition: background-color 0.3s ease;
 }
 .button:hover {
-  background-color: #66BB6A;
+  background-color: var(--color-accent);
+  color: var(--color-text-main);
 }
 
 /* ----------  FOOTER  ---------- */
 footer {
   background: var(--color-primary);
-  color: var(--color-text-main);
+  color: var(--color-highlight);
   padding: 20px;
   text-align: center;
   font-family: var(--font-body);
@@ -193,9 +193,9 @@ footer {
 }
 
 #game-canvas {
-  border: 2px solid var(--color-highlight);
+  border: 2px solid var(--color-primary);
   border-radius: 10px;
-  background: #FFF9E2;
+  background: #E9FFF2;
 }
 
 #timer-bar-container {
@@ -204,8 +204,8 @@ footer {
   left: 0;
   width: 100%;
   height: 20px;
-  background: #F0F0F0;
-  border: 1px solid #CCC;
+  background: #DAF5E5;
+  border: 1px solid #A3DA8D;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -225,7 +225,7 @@ footer {
 #game-over-screen {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(5, 46, 39, 0.75);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -235,12 +235,8 @@ footer {
 
 #game-over-screen h3,
 #game-over-screen p {
-  color: #FFF;
+  color: var(--color-highlight);
   font-family: var(--font-header);
-}
-
-#game-over-screen h3 {
-  font-size: 40px;
 }
 
 #game-over-screen h3 {
