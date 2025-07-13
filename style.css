@@ -1,80 +1,73 @@
-/* a minimalist set of CSS resets */
-/* Import fonts */
-@font-face {
-  font-family: HK Grotesk;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
-    format("opentype");
-}
-@font-face {
-  font-family: HK Grotesk;
-  font-weight: bold;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
-    format("opentype");
-}
+/* ----------  IMPORT FONTS  ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Rubik&display=swap");
 
-/* Import Playfair Display and Rubik */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Rubik&display=swap');
-
+/* ----------  DESIGN TOKENS  ---------- */
 :root {
-  --color-bg: #FFFDF6;
-  --color-text-main: #2D2D2D;
-  --color-primary: #FFD54F;
-  --color-accent: #F4E2D8;
-  --color-highlight: #F9A825;
+  --color-bg:        #FFFDF6;  /* warm parchment */
+  --color-text-main: #2D2D2D;  /* charcoal */
+  --color-primary:   #FFD54F;  /* sunny gold */
+  --color-accent:    #F4E2D8;  /* soft rose-beige */
+  --color-highlight: #F9A825;  /* golden accent */
+
   --wrapper-height: 87vh;
   --image-max-width: 300px;
   --image-margin: 3rem;
-  --font-family: 'Rubik', sans-serif;
-  --font-family-header: 'Playfair Display', serif;
+
+  --font-body: 'Rubik', sans-serif;
+  --font-header: 'Playfair Display', serif;
 }
 
+/* ----------  GLOBAL RESET  ---------- */
 html {
   box-sizing: border-box;
   font-size: 16px;
   scroll-behavior: smooth;
 }
-
-*, *:before, *:after {
+*, *::before, *::after {
   box-sizing: inherit;
 }
 
-img,
-video {
-  height: auto;
+img, video {
   max-width: 100%;
-}
-
-img {
+  height: auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
+/* ----------  BASE STYLES  ---------- */
 body {
-  font-family: var(--font-family);
   margin: 0;
-  padding: 0;
+  font-family: var(--font-body);
   line-height: 1.6;
-  background-color: var(--color-bg);
+  background: var(--color-bg);
   color: var(--color-text-main);
   display: flex;
   flex-direction: column;
 }
 
-header {
-  font-family: var(--font-family-header);
-  background-color: var(--color-primary);
-  padding: 20px;
+/* ----------  TYPOGRAPHY  ---------- */
+h1, h2, h3 {
+  font-family: var(--font-header);
+  color: var(--color-highlight);
+  margin-top: 0;
+}
+h2 {
+  text-align: center;
+  border: 2px solid var(--color-accent);
+  border-radius: 25px;
+  background: var(--color-bg);
+  padding: 0.6rem 1rem;
+}
+h3 {
+  color: var(--color-primary);
 }
 
-h2 {
-  color: var(--color-highlight);
+/* ----------  HEADER & NAVIGATION  ---------- */
+header {
+  background: var(--color-primary);
+  padding: 20px;
   text-align: center;
-  border-style: solid;
-  border-color: var(--color-accent);
-  border-radius: 25px;
-  background-color: #ffffff;
-  font-family: var(--font-family-header);
+  font-family: var(--font-header);
 }
 
 nav ul {
@@ -82,105 +75,87 @@ nav ul {
   padding: 0;
   list-style: none;
 }
-
-nav ul li {
-  font-family: var(--font-family);
-  display: inline;
+nav li {
+  display: inline-block;
 }
-
-nav ul li a {
-  color: #2D2D2D;
+nav a {
+  font-family: var(--font-body);
+  color: var(--color-text-main);
   text-decoration: none;
   margin-right: 15px;
 }
-
-nav ul li a:hover,
-nav ul li a.active {
+nav a:hover,
+nav a.active {
   color: var(--color-highlight);
 }
 
+/* ----------  SECTION STYLING  ---------- */
 section {
-  padding: 50px;
-  background-color: var(--color-bg);
-  margin-bottom: 30px;
-  color: var(--color-text-main);
-  font-family: var(--font-family);
+  padding: 50px 5%;
+  background: var(--color-bg);
 }
-
-section h2 {
-  color: var(--color-highlight);
-  margin-bottom: 20px;
-  font-family: var(--font-family-header);
-}
-
-section h3 {
-  color: var(--color-primary);
-  font-family: var(--font-family-header);
-}
-
 section p {
-  font-family: var(--font-family);
-  color: var(--color-text-main);
+  font-family: var(--font-body);
+}
+section h3 {
+  font-family: var(--font-header);
+  color: var(--color-primary);
 }
 
+/* ----------  RESOURCE + LINK SECTIONS  ---------- */
 .resources {
-  padding: 5px;
-  background-color: var(--color-accent);
+  background: var(--color-accent);
+  padding: 0.8rem 1rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  font-family: var(--font-family);
-}
-
-.map-container {
-  padding: 0px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  height: 450px;
-  width: 600px;
+  font-family: var(--font-body);
 }
 
 .anchor-links {
   width: 500px;
   float: left;
-  margin: 3rem;
+  margin: var(--image-margin);
   padding: 1rem;
   border: 2px solid var(--color-primary);
   border-radius: 15px;
-  background-color: #ffffff;
+  background: var(--color-bg);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 h4 a:link,
 h4 a:visited,
 h3 a:link {
   color: var(--color-highlight);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 h3 a:visited {
   color: var(--color-accent);
 }
 
+/* ----------  FOOTER  ---------- */
 footer {
-  background-color: var(--color-primary);
-  color: #2D2D2D;
+  background: var(--color-primary);
+  color: var(--color-text-main);
   padding: 20px;
   text-align: center;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
+/* ----------  GAME COMPONENTS  ---------- */
 #game-container {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80vh;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 #game-canvas {
   border: 2px solid var(--color-highlight);
   border-radius: 10px;
-  background-color: #FFF9E2;
+  background: #FFF9E2;
 }
 
 #timer-bar-container {
@@ -189,42 +164,39 @@ footer {
   left: 0;
   width: 100%;
   height: 20px;
-  background-color: #f0f0f0;
-  border: 1px solid #cccccc;
+  background: #F0F0F0;
+  border: 1px solid #CCC;
   border-radius: 5px;
   overflow: hidden;
 }
 
 #timer-bar {
   height: 100%;
-  background-color: var(--color-accent);
+  background: var(--color-accent);
 }
 
 #score-display {
   margin-top: 10px;
   font-size: 24px;
   font-weight: bold;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 #game-over-screen {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 #game-over-screen h3,
 #game-over-screen p {
-  color: #ffffff;
-  font-family: var(--font-family-header);
+  color: #FFF;
+  font-family: var(--font-header);
 }
 
 #game-over-screen h3 {
@@ -234,4 +206,3 @@ footer {
 #game-over-screen p {
   font-size: 24px;
 }
-
