@@ -46,7 +46,7 @@ body {
 }
 
 /* ----------  TYPOGRAPHY  ---------- */
-h1, h2, h3 {
+h1, h3 {
   font-family: var(--font-header);
   color: var(--color-primary);
   margin-top: 0;
