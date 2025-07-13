@@ -8,6 +8,7 @@
   --color-accent:    #A3DA8D;  /* pale lime green */
   --color-text-main: #052E27;  /* deep green */
   --color-highlight: #FDF6EC;  /* soft warm white */
+  --color-deep: #3D9C7F /* deep aqua */
 
   --wrapper-height: 87vh;
   --image-max-width: 300px;
@@ -54,7 +55,7 @@ h1, h2 {
 h3 {
   margin-top: 0;
   font-family: var(--font-header);
-  color: #3D9C7F;
+  color: var(--color-deep);
   text-align: center;
   border: 2px solid var(--color-accent);
   border-radius: 25px;
