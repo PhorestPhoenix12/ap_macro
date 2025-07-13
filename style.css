@@ -104,6 +104,7 @@ section {
   background-color: var(--color-bg);
   margin-bottom: 30px;
   color: var(--color-text-main);
+  font-family: var(--font-family);
 }
 
 section h2 {
@@ -126,6 +127,7 @@ section p {
   padding: 5px;
   background-color: var(--color-accent);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-family);
 }
 
 .map-container {
@@ -144,12 +146,14 @@ section p {
   border-radius: 15px;
   background-color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-family);
 }
 
 h4 a:link,
 h4 a:visited,
 h3 a:link {
   color: var(--color-highlight);
+  font-family: var(--font-family);
 }
 
 h3 a:visited {
@@ -161,6 +165,7 @@ footer {
   color: #2D2D2D;
   padding: 20px;
   text-align: center;
+  font-family: var(--font-family);
 }
 
 #game-container {
@@ -169,6 +174,7 @@ footer {
   justify-content: center;
   align-items: center;
   height: 80vh;
+  font-family: var(--font-family);
 }
 
 #game-canvas {
@@ -198,6 +204,7 @@ footer {
   margin-top: 10px;
   font-size: 24px;
   font-weight: bold;
+  font-family: var(--font-family);
 }
 
 #game-over-screen {
@@ -211,11 +218,13 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: var(--font-family);
 }
 
 #game-over-screen h3,
 #game-over-screen p {
   color: #ffffff;
+  font-family: var(--font-family-header);
 }
 
 #game-over-screen h3 {
