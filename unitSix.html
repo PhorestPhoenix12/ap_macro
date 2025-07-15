@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unit 6</title>
+    <title>Unit 5</title>
    <link rel="stylesheet" type="text/css" href="style.css">
     <script>
         // Js to give active class to the nav link
@@ -22,7 +22,7 @@
 </head>
 <body>
     <header>
-        <h1 class="welcome-head" style="color: #fff;">Unit 6 Charts</h1>
+        <h1 class="welcome-head" style="color: #fff;">Unit 5 Charts</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -30,8 +30,8 @@
                 <li><a href="unitTwo.html">Unit 2</a></li>
                 <li><a href="unitThree.html">Unit 3</a></li>
                 <li><a href="unitFour.html">Unit 4</a></li>
-                <li><a href="unitFive.html">Unit 5</a></li>
-                <li><a href="unitSix.html" class="active">Unit 6</a></li>
+                <li><a href="unitFive.html" class="active">Unit 5</a></li>
+                <li><a href="unitSix.html">Unit 6</a></li>
                 <li><a href="households.html">Households</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -55,38 +55,146 @@
 </style>
 
 
+/* Clear floats after the columns */
+html {
+  scroll-behavior: smooth;
+}
 
-  <div class="column" style="background-color:#EAFFE2;">
-    <h2>US Gross private domestic investment %: Frequency[Quarterly]</h2>
-    <section>
-        <div class="map-container">
-            <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1ib2c&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy"></iframe>
-        </div>
-    </section>
-    <h3>The change in private inventory's contributions to percent change in real gross domestic product.</h3>
-  </div>
+/* FRED Graphs
+  Header/title
+  Graph centered
+  Blurb*/
+</style>
 
-
-  <div class="column" style="background-color:#EAFFE2;">
-    <h2>US 10-Year Real Interest Rate %: Frequency[Monthly]</h2>
-
-    <section>
-        <div class="map-container">
-<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1ib2M&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy"></iframe>
-        </div>
-    </section>
-    <h3>The change in real federal interest rates over the years represent the interest consumers and business have to pay back on items such as loans.</h3>  
-  </div>
+<!--Anchor Links-->
+<!-- Anchor Links -->
+<div class="anchor-links" style="padding: 20px;">
+  <h3 style="text-align: left;">Sections:</h3>
+  <h4 style="text-align: left;">
+    <a href="#net-iip">Net U.S. International Investment Position</a> <br>
+    <a href="#usd-index-nominal">Nominal Broad U.S. Dollar Index</a> <br>
+    <a href="#usd-jpy">Exchange Rate: USD to JPY</a> <br>
+    <a href="#usd-euro">Exchange Rate: USD to EUR</a> <br>
+    <a href="#trade-balance">U.S. Trade Balance: Goods and Services</a> <br>
+    <a href="#foreign-holdings-debt">Foreign Holdings of U.S. Federal Debt</a> <br>
+  </h4>
+</div>
   
-  <div class="column" style="background-color:#EAFFE2;">
-    <h2>US Net Exports of Goods and Services: Frequency[Quarterly]</h2>
-      <section>
-        <div class="map-container">
-            <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1ib3l&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy"></iframe>
-        </div>
-    </section>
-  <h3>The total US exports subtracted by the total US imports.</h3>  
-  </div>
+<!--Back-to-top-button-->
+<a href="#top" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: sans-serif;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+">
+  ↑ Back to Top
+</a>
+
+<!--Graphs-->
+
+
+<div class="column" style="background-color:#EAFFE2; padding: 20px;">
+  <h2 style="text-align: center;" id="net-iip">Net U.S. International Investment Position: Frequency [Quarterly]</h2>
+  <section style="padding: 1rem;">
+    <div style="width: 100%; overflow-x: auto;">
+      <div style="width: 670px; margin: 0 auto;">
+        <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1P6Qz&width=670&height=475"
+                style="width: 100%; height: 525px; border: none; display: block;" frameborder="0" scrolling="no" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <h3 style="text-align: center;">
+    The Net International Investment Position (IIP) shows the difference between what U.S. residents own abroad and what foreigners own in the U.S. A negative IIP means the U.S. is a net debtor, reflecting years of current account deficits and foreign borrowing.
+  </h3>
+</div>
+
+<div class="column" style="background-color:#EAFFE2; padding: 20px;">
+  <h2 style="text-align: center;" id="usd-index-nominal">Nominal Broad U.S. Dollar Index: Frequency [Monthly]</h2>
+  <section style="padding: 1rem;">
+    <div style="width: 100%; overflow-x: auto;">
+      <div style="width: 670px; margin: 0 auto;">
+        <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1P6QA&width=670&height=475"
+                style="width: 100%; height: 525px; border: none; display: block;" frameborder="0" scrolling="no" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <h3 style="text-align: center;">
+    This index measures the U.S. dollar’s strength against a broad set of foreign currencies. An increase in the index means the dollar has appreciated, making imports cheaper but exports less competitive, impacting net exports and GDP.
+  </h3>
+</div>
+
+<div class="column" style="background-color:#EAFFE2; padding: 20px;">
+  <h2 style="text-align: center;" id="usd-jpy">Exchange Rate: USD to Japanese Yen: Frequency [Daily]</h2>
+  <section style="padding: 1rem;">
+    <div style="width: 100%; overflow-x: auto;">
+      <div style="width: 670px; margin: 0 auto;">
+        <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1P6QB&width=670&height=475"
+                style="width: 100%; height: 525px; border: none; display: block;" frameborder="0" scrolling="no" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <h3 style="text-align: center;">
+    This exchange rate shows how many Japanese yen one U.S. dollar can buy. A rising value means a stronger dollar, which makes Japanese imports cheaper for Americans but can hurt U.S. exports to Japan.
+  </h3>
+</div>
+
+<div class="column" style="background-color:#EAFFE2; padding: 20px;">
+  <h2 style="text-align: center;" id="usd-euro">Exchange Rate: USD to Euro: Frequency [Daily]</h2>
+  <section style="padding: 1rem;">
+    <div style="width: 100%; overflow-x: auto;">
+      <div style="width: 670px; margin: 0 auto;">
+        <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1P6QC&width=670&height=475"
+                style="width: 100%; height: 525px; border: none; display: block;" frameborder="0" scrolling="no" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <h3 style="text-align: center;">
+    This graph shows the dollar-to-euro exchange rate. Changes in this rate influence the U.S. trade balance with Europe and are often driven by interest rate differences and economic outlooks between the U.S. and Eurozone.
+  </h3>
+</div>
+
+<div class="column" style="background-color:#EAFFE2; padding: 20px;">
+  <h2 style="text-align: center;" id="trade-balance">U.S. Trade Balance: Goods and Services: Frequency [Monthly]</h2>
+  <section style="padding: 1rem;">
+    <div style="width: 100%; overflow-x: auto;">
+      <div style="width: 670px; margin: 0 auto;">
+        <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1P6QD&width=670&height=475"
+                style="width: 100%; height: 525px; border: none; display: block;" frameborder="0" scrolling="no" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <h3 style="text-align: center;">
+    This graph shows the net value of exports minus imports. A trade deficit appears as a negative value and suggests the U.S. is spending more on foreign goods than it earns from exports.
+  </h3>
+</div>
+
+<div class="column" style="background-color:#EAFFE2; padding: 20px;">
+  <h2 style="text-align: center;" id="foreign-holdings-debt">Foreign Holdings of U.S. Federal Debt: Frequency [Quarterly]</h2>
+  <section style="padding: 1rem;">
+    <div style="width: 100%; overflow-x: auto;">
+      <div style="width: 670px; margin: 0 auto;">
+        <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1P6QE&width=670&height=475"
+                style="width: 100%; height: 525px; border: none; display: block;" frameborder="0" scrolling="no" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <h3 style="text-align: center;">
+    This graph shows how much of the U.S. federal debt is owned by foreign governments and institutions. High foreign ownership indicates global trust in the U.S. economy but also exposes fiscal policy to international market dynamics.
+  </h3>
+</div>
   
  <footer>
         <p>&copy; 2024 APMacroCharts. All rights reserved.</p>
