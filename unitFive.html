@@ -55,38 +55,195 @@
 </style>
 
 
+/* Clear floats after the columns */
+html {
+  scroll-behavior: smooth;
+}
 
-  <div class="column" style="background-color:#EAFFE2;">
-    <h2>US Gross private domestic investment %: Frequency[Quarterly]</h2>
-    <section>
-        <div class="map-container">
-            <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1ib2c&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy"></iframe>
-        </div>
-    </section>
-    <h3>The change in private inventory's contributions to percent change in real gross domestic product.</h3>
-  </div>
+/* FRED Graphs
+  Header/title
+  Graph centered
+  Blurb*/
+</style>
 
-
-  <div class="column" style="background-color:#EAFFE2;">
-    <h2>US 10-Year Real Interest Rate %: Frequency[Monthly]</h2>
-
-    <section>
-        <div class="map-container">
-<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1ib2M&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy"></iframe>
-        </div>
-    </section>
-    <h3>The change in real federal interest rates over the years represent the interest consumers and business have to pay back on items such as loans.</h3>  
+<!--Anchor Links-->
+  <div class="anchor-links" style="padding: 20px;">
+    
+     <h3 style="text-align: left;">Sections:</h3>
+      
+    <h4 style="text-align: left;">
+      <a href="#core-pce">Core PCE Price Index</a> <br>
+      <a href="#federal-deficit-gdp">Federal Surplus or Deficit Percent of GDP</a> <br>
+      <a href="#public-debt-gdp">Total Public Debt as Percent of GDP</a> <br>
+      <a href="#average-hourly-earnings">Average Hourly Earnings of Employees</a> <br>
+      <a href="#labor-productivity">Labor Productivity</a> <br>
+      <a href="#ten-year-treasury">10-Year Treasury Nominal Interest Rate</a> <br>
+    </h4>
   </div>
   
-  <div class="column" style="background-color:#EAFFE2;">
-    <h2>US Net Exports of Goods and Services: Frequency[Quarterly]</h2>
-      <section>
-        <div class="map-container">
-            <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1ib3l&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy"></iframe>
+<!--Back-to-top-button-->
+<a href="#top" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: sans-serif;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+">
+  ↑ Back to Top
+</a>
+
+<!--Graphs-->
+
+
+    <div class="column" style="background-color:#EAFFE2; padding: 20px;">
+      <!--Graph ID-->
+      <h2 style="text-align: center;" id="core-pce">Core PCE Price Index: Frequency[Monthly]</h2>
+      <section style="padding: 1rem;">
+        <div style="width: 100%; overflow-x: auto;">
+          <!-- Inner fixed-width centered container -->
+          <div style="width: 670px; margin: 0 auto;">
+            <!--Graph Link-->
+            <iframe 
+              src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1KCuK&width=670&height=475"
+              style="width: 100%; height: 525px; border: none; display: block;"
+              frameborder="0"
+              scrolling="no"
+              loading="lazy">
+            </iframe>
+          </div>
         </div>
-    </section>
-  <h3>The total US exports subtracted by the total US imports.</h3>  
-  </div>
+      </section>
+      <h3 style="text-align: center;">
+        The Core PCE Price Index removes food and energy prices to give a clearer picture of long-term inflation trends. Policymakers often use this version to assess whether inflationary pressures are persistent or temporary.
+      </h3>
+    </div>
+
+    <div class="column" style="background-color:#EAFFE2; padding: 20px;">
+      <!--Graph ID-->
+      <h2 style="text-align: center;" id="federal-deficit-gdp">Federal Surplus or Deficit Percent of GDP: Frequency[Quarterly]</h2>
+      <section style="padding: 1rem;">
+        <div style="width: 100%; overflow-x: auto;">
+          <!-- Inner fixed-width centered container -->
+          <div style="width: 670px; margin: 0 auto;">
+            <!--Graph Link-->
+            <iframe 
+              src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1G6NC&width=670&height=475"
+              style="width: 100%; height: 525px; border: none; display: block;"
+              frameborder="0"
+              scrolling="no"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </section>
+      <h3 style="text-align: center;">
+        This graph shows whether the federal government is running a budget surplus or deficit as a percentage of GDP. It is helpful for analyzing the government’s fiscal stance and the long-term impact of discretionary fiscal policy.
+      </h3>
+    </div>
+
+
+
+    <div class="column" style="background-color:#EAFFE2; padding: 20px;">
+      <!--Graph ID-->
+      <h2 style="text-align: center;" id="public-debt-gdp">Total Public Debt as Percent of GDP: Frequency[Quarterly]</h2>
+      <section style="padding: 1rem;">
+        <div style="width: 100%; overflow-x: auto;">
+          <!-- Inner fixed-width centered container -->
+          <div style="width: 670px; margin: 0 auto;">
+            <!--Graph Link-->
+            <iframe 
+              src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1JYO7&width=670&height=475"
+              style="width: 100%; height: 525px; border: none; display: block;"
+              frameborder="0"
+              scrolling="no"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </section>
+      <h3 style="text-align: center;">
+        This graph illustrates the size of the national debt relative to the economy. A rising debt-to-GDP ratio can lead to concerns about sustainability, potential crowding out of private investment, and constraints on future policy options.
+      </h3>
+    </div>
+
+
+    <div class="column" style="background-color:#EAFFE2; padding: 20px;">
+      <!--Graph ID-->
+      <h2 style="text-align: center;" id="average-hourly-earnings">Average Hourly Earnings of Employees: Frequency[Monthly]</h2>
+      <section style="padding: 1rem;">
+        <div style="width: 100%; overflow-x: auto;">
+          <!-- Inner fixed-width centered container -->
+          <div style="width: 670px; margin: 0 auto;">
+            <!--Graph Link-->
+            <iframe 
+              src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1KCvE&width=670&height=475"
+              style="width: 100%; height: 525px; border: none; display: block;"
+              frameborder="0"
+              scrolling="no"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </section>
+      <h3 style="text-align: center;">
+        This graph shows the trend in average hourly wages for U.S. workers in the private sector. Rising wages can signal a tightening labor market, contribute to cost-push inflation, and influence decisions by the Federal Reserve regarding interest rates.
+      </h3>
+    </div>
+
+
+  <div class="column" style="background-color:#EAFFE2; padding: 20px;">
+      <!--Graph ID-->
+      <h2 style="text-align: center;" id="labor-productivity">Labor Productivity: Frequency[Quarterly]</h2>
+      <section style="padding: 1rem;">
+        <div style="width: 100%; overflow-x: auto;">
+          <!-- Inner fixed-width centered container -->
+          <div style="width: 670px; margin: 0 auto;">
+            <!--Graph Link-->
+            <iframe 
+              src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1KCeI&width=670&height=475"
+              style="width: 100%; height: 525px; border: none; display: block;"
+              frameborder="0"
+              scrolling="no"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </section>
+      <h3 style="text-align: center;">
+        Labor productivity measures how much output is produced per hour worked. This graph is essential for understanding long-run economic growth and how increases in productivity shift the long-run aggregate supply (LRAS) curve.
+      </h3>
+    </div>
+
+
+    
+  <div class="column" style="background-color:#EAFFE2; padding: 20px;">
+      <!--Graph ID-->
+      <h2 style="text-align: center;" id="ten-year-treasury">10-Year Treasury Nominal Interest Rate: Frequency[Daily]</h2>
+      <section style="padding: 1rem;">
+        <div style="width: 100%; overflow-x: auto;">
+          <!-- Inner fixed-width centered container -->
+          <div style="width: 670px; margin: 0 auto;">
+            <!--Graph Link-->
+            <iframe 
+              src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1KCvU&width=670&height=475"
+              style="width: 100%; height: 525px; border: none; display: block;"
+              frameborder="0"
+              scrolling="no"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </section>
+      <h3 style="text-align: center;">
+        This graph shows the nominal interest rate on 10-year government bonds. It reflects long-term expectations of inflation and economic growth and is often referenced in evaluating the stance of monetary policy in the long run.
+      </h3>
+    </div>
   
  <footer>
         <p>&copy; 2024 APMacroCharts. All rights reserved.</p>
