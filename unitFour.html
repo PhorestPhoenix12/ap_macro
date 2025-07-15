@@ -51,42 +51,195 @@
 }
 
 /* Clear floats after the columns */
+/* Clear floats after the columns */
+html {
+  scroll-behavior: smooth;
+}
 
+/* FRED Graphs
+  Header/title
+  Graph centered
+  Blurb*/
 </style>
 
-
-
-  <div class="column" style="background-color:#EAFFE2;">
-    <h2>US Gross private domestic investment %: Frequency[Quarterly]</h2>
-    <section>
-        <div class="map-container">
-            <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1ib2c&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy"></iframe>
-        </div>
-    </section>
-    <h3>The change in private inventory's contributions to percent change in real gross domestic product.</h3>
-  </div>
-
-
-  <div class="column" style="background-color:#EAFFE2;">
-    <h2>US 10-Year Real Interest Rate %: Frequency[Monthly]</h2>
-
-    <section>
-        <div class="map-container">
-<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1ib2M&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy"></iframe>
-        </div>
-    </section>
-    <h3>The change in real federal interest rates over the years represent the interest consumers and business have to pay back on items such as loans.</h3>  
+<!--Anchor Links-->
+  <div class="anchor-links" style="padding: 20px;">
+    
+     <h3 style="text-align: left;">Sections:</h3>
+      
+    <h4 style="text-align: left;">
+      <a href="#monetary-base">Monetary Base</a> <br>
+      <a href="#m2-stock">M2 Money Stock</a> <br>
+      <a href="#iorb-rate">Interest on Reserve Balances</a> <br>
+      <a href="#bank-credit">bank-credit</a> <br>
+      <a href="#m2-velocity">Velocity of M2 Money Stock</a> <br>
+      <a href="#fed-funds-rate">Effective Federal Funds Rate</a> <br>
+    </h4>
   </div>
   
-  <div class="column" style="background-color:#EAFFE2;">
-    <h2>US Net Exports of Goods and Services: Frequency[Quarterly]</h2>
-      <section>
-        <div class="map-container">
-            <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1ib3l&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy"></iframe>
+<!--Back-to-top-button-->
+<a href="#top" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: sans-serif;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+">
+  ↑ Back to Top
+</a>
+
+<!--Graphs-->
+
+
+    <div class="column" style="background-color:#EAFFE2; padding: 20px;">
+      <!--Graph ID-->
+      <h2 style="text-align: center;" id="monetary-base">Monetary Base: Frequency[Monthly]</h2>
+      <section style="padding: 1rem;">
+        <div style="width: 100%; overflow-x: auto;">
+          <!-- Inner fixed-width centered container -->
+          <div style="width: 670px; margin: 0 auto;">
+            <!--Graph Link-->
+            <iframe 
+              src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1KCf9&width=670&height=475"
+              style="width: 100%; height: 525px; border: none; display: block;"
+              frameborder="0"
+              scrolling="no"
+              loading="lazy">
+            </iframe>
+          </div>
         </div>
-    </section>
-  <h3>The total US exports subtracted by the total US imports.</h3>  
-  </div>
+      </section>
+      <h3 style="text-align: center;">
+        The monetary base includes currency in circulation and bank reserves held at the Fed. It's the foundation of money creation. This graph is essential for illustrating how central bank actions like quantitative easing increase the base — which commercial banks can then multiply into broader money supply.
+      </h3>
+    </div>
+
+    <div class="column" style="background-color:#EAFFE2; padding: 20px;">
+      <!--Graph ID-->
+      <h2 style="text-align: center;" id="m2-stock">M2 Money Stock: Frequency[Monthly]</h2>
+      <section style="padding: 1rem;">
+        <div style="width: 100%; overflow-x: auto;">
+          <!-- Inner fixed-width centered container -->
+          <div style="width: 670px; margin: 0 auto;">
+            <!--Graph Link-->
+            <iframe 
+              src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1JOQr&width=670&height=475"
+              style="width: 100%; height: 525px; border: none; display: block;"
+              frameborder="0"
+              scrolling="no"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </section>
+      <h3 style="text-align: center;">
+        M2 is a broad measure of the money supply, including cash, checking deposits, and easily convertible near-money like savings deposits. Tracking M2 helps show how the Federal Reserve’s actions influence liquidity in the economy. A rapid rise may signal expansionary policy or inflationary pressure.
+      </h3>
+    </div>
+
+
+
+    <div class="column" style="background-color:#EAFFE2; padding: 20px;">
+      <!--Graph ID-->
+      <h2 style="text-align: center;" id="iorb-rate">Interest on Reserve Balances: Frequency[Daily]</h2>
+      <section style="padding: 1rem;">
+        <div style="width: 100%; overflow-x: auto;">
+          <!-- Inner fixed-width centered container -->
+          <div style="width: 670px; margin: 0 auto;">
+            <!--Graph Link-->
+            <iframe 
+              src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1KCft&width=670&height=475"
+              style="width: 100%; height: 525px; border: none; display: block;"
+              frameborder="0"
+              scrolling="no"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </section>
+      <h3 style="text-align: center;">
+        IORB is the interest rate the Fed pays on reserves held by banks. It acts as a floor for short-term interest rates and is a newer tool used in post-2008 monetary policy. Tracking this rate helps students understand how the Fed controls bank incentives and overall liquidity.
+      </h3>
+    </div>
+
+
+    <div class="column" style="background-color:#EAFFE2; padding: 20px;">
+      <!--Graph ID-->
+      <h2 style="text-align: center;" id="bank-credit">Bank Credit Commercial Banks: Frequency[Weekly]</h2>
+      <section style="padding: 1rem;">
+        <div style="width: 100%; overflow-x: auto;">
+          <!-- Inner fixed-width centered container -->
+          <div style="width: 670px; margin: 0 auto;">
+            <!--Graph Link-->
+            <iframe 
+              src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1KCeH&width=670&height=475"
+              style="width: 100%; height: 525px; border: none; display: block;"
+              frameborder="0"
+              scrolling="no"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </section>
+      <h3 style="text-align: center;">
+        Bank credit reflects the total loans and leases issued by commercial banks. It helps visualize how banks expand the money supply through lending. A sharp rise suggests credit expansion, while declines may signal tighter credit conditions or reduced demand for loans.
+      </h3>
+    </div>
+
+
+  <div class="column" style="background-color:#EAFFE2; padding: 20px;">
+      <!--Graph ID-->
+      <h2 style="text-align: center;" id="m2-velocity">Velocity of M2 Money Stock: Frequency[Quarterly]</h2>
+      <section style="padding: 1rem;">
+        <div style="width: 100%; overflow-x: auto;">
+          <!-- Inner fixed-width centered container -->
+          <div style="width: 670px; margin: 0 auto;">
+            <!--Graph Link-->
+            <iframe 
+              src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1KCeI&width=670&height=475"
+              style="width: 100%; height: 525px; border: none; display: block;"
+              frameborder="0"
+              scrolling="no"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </section>
+      <h3 style="text-align: center;">
+        The velocity of money measures how frequently a dollar is spent in the economy. A falling M2 velocity implies that even with more money in circulation, economic activity may remain sluggish. It’s essential for understanding why inflation doesn’t always rise with monetary expansion.
+      </h3>
+    </div>
+
+
+    
+  <div class="column" style="background-color:#EAFFE2; padding: 20px;">
+      <!--Graph ID-->
+      <h2 style="text-align: center;" id="fed-funds-rate">Effective Federal Funds Rate: Frequency[Daily]</h2>
+      <section style="padding: 1rem;">
+        <div style="width: 100%; overflow-x: auto;">
+          <!-- Inner fixed-width centered container -->
+          <div style="width: 670px; margin: 0 auto;">
+            <!--Graph Link-->
+            <iframe 
+              src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1JX1E&width=670&height=475"
+              style="width: 100%; height: 525px; border: none; display: block;"
+              frameborder="0"
+              scrolling="no"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </section>
+      <h3 style="text-align: center;">
+        This is the interest rate banks charge each other for overnight loans and serves as the Federal Reserve’s primary policy tool. Changes in this rate influence borrowing costs, investment, and ultimately aggregate demand. It's key to visualizing the stance of monetary policy over time.
+      </h3>
+    </div>
   
  <footer>
         <p>&copy; 2024 APMacroCharts. All rights reserved.</p>
