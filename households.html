@@ -51,43 +51,106 @@
 }
 
 /* Clear floats after the columns */
+/* Clear floats after the columns */
+html {
+  scroll-behavior: smooth;
+}
 
+/* FRED Graphs
+  Header/title
+  Graph centered
+  Blurb*/
 </style>
 
+<!--Anchor Links-->
+<div class="anchor-links" style="padding: 20px;">
+  <h3 style="text-align: left;">Sections:</h3>
+  <h4 style="text-align: left;">
+    <a href="#real-income">Real Median Household Income</a> <br>
+    <a href="#income-vs-cpi">Income Growth vs. CPI</a> <br>
+    <a href="#fed-funds">Federal Funds Effective Rate</a> <br>
+  </h4>
+</div>
+    
+<!--Back-to-top-button-->
+<a href="#top" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: sans-serif;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+">
+  ↑ Back to Top
+</a>
 
+    
 
-  <div class="column" style="background-color:#EAFFE2;">
-    <h2>US: Real Median Household Income</h2>
-    <section>
-        <div class="map-container">
-            <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1aV7p&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy"></iframe>
+    <!-- Column 1 -->
+    <div class="column" style="background-color:#EAFFE2;">
+      <h2 style="text-align: center;" id="real-income">US: Real Median Household Income</h2>
+      <section style="padding: 1rem;">
+        <div style="width: 100%; overflow-x: auto;">
+          <div style="width: 670px; margin: 0 auto;">
+            <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1aV7p&width=670&height=475"
+                    scrolling="no" frameborder="0"
+                    style="overflow:hidden; width: 100%; height: 525px;"
+                    allowtransparency="true" loading="lazy"></iframe>
+          </div>
         </div>
-    </section>
-    <h3></h3>
-  </div>
+      </section>
+      <h3 style="text-align: center;">
+        This graph shows inflation-adjusted median household income in the U.S., reflecting how the typical family’s standard of living has changed over time. It's a key measure of economic well-being and purchasing power for the middle class.
+      </h3>
+    </div>
 
 
-  <div class="column" style="background-color:#EAFFE2;">
-    <h2>US: Median Household Income Growth(%) <br>US: CPI for Urban Consumers(%)</h2>
-
-    <section>
-        <div class="map-container">
-            <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1ivlZ&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy"></iframe>
+    
+    <!-- Column 2 -->
+    <div class="column" style="background-color:#EAFFE2;">
+      <h2 style="text-align: center;" id="income-vs-cpi">Median Household Income Growth (%) and CPI for Urban Consumers (%)</h2>
+      <section style="padding: 1rem;">
+        <div style="width: 100%; overflow-x: auto;">
+          <div style="width: 670px; margin: 0 auto;">
+            <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1ivlZ&width=670&height=475"
+                    scrolling="no" frameborder="0"
+                    style="overflow:hidden; width: 100%; height: 525px;"
+                    allowtransparency="true" loading="lazy"></iframe>
+          </div>
         </div>
-    </section>
-    <h3></h3>  
-  </div>
-  
-  <div class="column" style="background-color:#EAFFE2;">
-    <h2>US Federal Funds Effective Rate</h2>
-      <section>
-        <div class="map-container">
-            <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1ivtX&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy"></iframe>
+      </section>
+      <h3 style="text-align: center;">
+        This dual-axis graph compares the growth rate of household income with the inflation rate (CPI). If income growth lags behind inflation, real purchasing power declines, which affects consumer confidence and consumption levels.
+      </h3>
+    </div>
+
+
+    
+    <!-- Column 3 -->
+    <div class="column" style="background-color:#EAFFE2;">
+      <h2 style="text-align: center;" id="fed-funds">Federal Funds Effective Rate</h2>
+      <section style="padding: 1rem;">
+        <div style="width: 100%; overflow-x: auto;">
+          <div style="width: 670px; margin: 0 auto;">
+            <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1ivtX&width=670&height=475"
+                    scrolling="no" frameborder="0"
+                    style="overflow:hidden; width: 100%; height: 525px;"
+                    allowtransparency="true" loading="lazy"></iframe>
+          </div>
         </div>
-    </section>
-  <h3></h3>  
-  </div>
-  
+      </section>
+      <h3 style="text-align: center;">
+        This graph tracks the federal funds rate — the benchmark interest rate set by the Federal Reserve. Changes in this rate influence household borrowing costs for mortgages, credit cards, and loans, making it highly relevant for everyday financial decisions.
+      </h3>
+    </div>
+
+
+    
  <footer>
         <p>&copy; 2024 APMacroCharts. All rights reserved.</p>
     </footer>
